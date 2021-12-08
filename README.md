@@ -2,3 +2,5 @@
 https://t0nik.github.io
 
 Status: Building the website.
+
+Font family used: **Lato**
