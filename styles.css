@@ -1,22 +1,20 @@
 @font-face {
-    font-family: Lato;
+    font-family: 'Lato';
     src: url(Fonts/Lato-Regular.ttf);
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
-    font-family: Lato;
+    font-family: 'Lato';
     src: url(Fonts/Lato-Black.ttf);
     font-weight: bold;
 }
 
-
-
 body{
     background-color:rgb(35, 46, 65);
     color: white;
-    font-family: Lato, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
 }
