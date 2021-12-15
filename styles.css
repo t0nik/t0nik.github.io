@@ -72,7 +72,6 @@ nav li {
     background-color: rgb(68, 71, 97);
     height: 49rem;
     padding: 1rem;
-    text-align: center;
     display: flex;
     flex-direction: column;
 }
@@ -84,6 +83,7 @@ nav li {
 /* Content */
 
 .content {
+    text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -111,6 +111,13 @@ nav li {
     margin: 0 0 0.5rem 0;
 }
 
+.content .myLinks img{
+    width: 16px;
+    margin-right: 2px;
+    position: relative;
+    top: 2px;
+}
+
 .content li {
     margin: 0 0 1rem 0;
 }
@@ -122,6 +129,7 @@ nav li {
 }
 
 .main h3 {
+    margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
@@ -136,6 +144,17 @@ nav li {
     margin: 1rem;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);;
 }
+
+/* Text-Box */
+.text-box {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 30% 0 30%;
+    margin-bottom: 0.25rem;
+}
+
 
 /* Footer */
 
