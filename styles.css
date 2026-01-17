@@ -53,6 +53,10 @@ body {
   color: var(--primary);
 }
 
+.about > .dropdown {
+  margin-top: 0.5rem;
+}
+
 .name {
     font-size: 3rem;
     color: var(--yellow);
@@ -64,6 +68,10 @@ body {
     font-size: 2.25rem;
     color: var(--primary);
     display: inline;
+}
+
+.description {
+  padding: 2rem;
 }
 
 .dropdown-content {
@@ -94,13 +102,35 @@ button:hover {
   flex-wrap: wrap;
 }
 
-.cardlist div {
+.cardlist > div {
   flex: calc(50% - 2*3rem);
-  height: 15rem;
   outline: solid white 1px;
   margin: 3rem;
 }
 
-.cardlist div:nth-child(-n + 2) {
+.cardlist > div:nth-child(-n + 2) {
   margin-top: 2rem;
+}
+
+.card {
+  position: relative;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  height: 2rem;
+  background-color: white;
+  color: var(--bg); 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
 }
