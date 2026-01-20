@@ -96,7 +96,7 @@ function cardAnimate(card) {
 
 window.onload = (e) => {
   console.log(document.querySelector('.about'));
-  const dropdownButton = document.querySelector('.dropdown button');
+  const dropdownButton = document.querySelector('.dropbtn');
   const dropdownContent = document.querySelector('.dropdown-content');
 
   dropdownButton.addEventListener('click', (e) => { 
