@@ -4,8 +4,13 @@
   --yellow: oklch(87.9% 0.169 91.605);
   --bg: oklch(21.6% 0.006 56.043);
   --contour: oklch(26.8% 0.007 34.298);
+  --countour-secondary: oklch(60.2% 0.01 41.269);
   --primary: oklch(92.3% 0.003 48.717);
   --secondary: oklch(70.9% 0.01 56.259);
+}
+
+:root {
+  --footer-size: 2rem;
 }
 
 html { scrollbar-width: none; } /* Firefox */
@@ -36,8 +41,8 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
 body {
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    margin: 0 25% 0 25%;
-    padding: 0;
+    padding: 0 25% 0 25%;
+    margin: 0;
     height: 100vh;
     background-color: var(--bg);;
     color: oklch(98.5% 0.001 106.423);
@@ -46,6 +51,7 @@ body {
     flex-direction: column;
     flex: 1;
     gap: 0.5rem;
+    overflow: hidden;
 }
 
 .about {
@@ -55,6 +61,10 @@ body {
 
 .about > .dropdown {
   margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .name {
@@ -71,7 +81,15 @@ body {
 }
 
 .description {
-  padding: 2rem;
+  padding: 0.5rem 2rem 1rem 2rem;
+  background: var(--contour);
+  border-radius: 8px;
+  width: 75%;
+  justify-content: center;
+}
+
+.description > .text {
+  text-align: left;
 }
 
 .dropdown-content {
@@ -104,33 +122,95 @@ button:hover {
 
 .cardlist > div {
   flex: calc(50% - 2*3rem);
-  outline: solid white 1px;
+  outline: solid var(--countour-secondary) 1px;
   margin: 3rem;
 }
 
 .cardlist > div:nth-child(-n + 2) {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .card {
   position: relative;
+  border-radius: 4px;
 }
 
 .card-footer {
   position: absolute;
   bottom: 0;
-  height: 2rem;
-  background-color: white;
+  height: var(--footer-size);
+  background-color: var(--yellow);
   color: var(--bg); 
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 1rem;
+  z-index: 2;
+  border-radius: 4px;
+}
+
+.card-desc {
+  text-align: left;
+  margin: 0 0.75rem 0.75rem 0.75rem;
+  padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+  /* min-height: calc(100% - var(--footer-size) - 2rem); */
+  border-radius: 10px;
+  width: calc(100% - 2.5rem);
+  background-color: #000000aa;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
 }
 
 img {
   height: 100%;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.divider {
+  border-bottom: var(--countour-secondary) 1px solid;
+  height: 1rem;
+  margin-bottom: 1rem;
+}
+
+.invis-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.scroll-bottom {
+  position: absolute;
+  bottom: 0;
+  height: 120px;
+  width: 100%;
+  overflow: hidden;
+  display: none;
+  border-bottom: var(--contour) 1px solid;
+}
+
+.scroll-top {
+  position: absolute;
+  top: 0;
+  height: 120px;
+  width: 100%;
+  overflow: hidden;
+  display: none;
+  border-top: var(--contour) 1px solid;
+}
+
+.scroll-bottom > .scroll-shadow {
+  box-shadow: 0 120px 80px 40px #00000077;
+}
+
+.scroll-top > .scroll-shadow {
+  box-shadow: 0 0px 80px 40px #00000077;
+}
+
+.projects {
+  position: relative;
+  height: 100%;
 }
