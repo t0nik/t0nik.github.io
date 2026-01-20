@@ -13,6 +13,16 @@
   --footer-size: 2rem;
 }
 
+::-moz-selection {
+  color: var(--bg);
+  background: var(--yellow);
+}
+
+::selection {
+  color: var(--bg);;
+  background: var(--yellow);
+}
+
 html { scrollbar-width: none; } /* Firefox */
 body { -ms-overflow-style: none; } /* IE and Edge */
 body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Chrome */
@@ -130,6 +140,7 @@ button {
 
 button:hover {
     background-color: var(--yellow);
+    color: var(--bg);`
 }
 
 .cardlist {
