@@ -125,6 +125,12 @@ window.onload = (e) => {
   const dropdownButton = document.querySelector('.dropbtn');
   const dropdownContent = document.querySelector('.dropdown-content');
 
+  window.addEventListener("resize", (e) => {
+    if (window.innerWidth > 960) return;
+    if (dropdownContent.style.display === 'block') return;
+    dropdownContent.style.display = 'block';
+  })
+
   dropdownButton.addEventListener('click', (e) => { 
     // console.log("siema", e);
     dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';

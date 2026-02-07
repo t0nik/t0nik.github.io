@@ -23,9 +23,9 @@
   background: var(--yellow);
 }
 
-html { scrollbar-width: none; } /* Firefox */
-body { -ms-overflow-style: none; } /* IE and Edge */
-body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Chrome */
+/* html { scrollbar-width: none; } Firefox */
+/* body { -ms-overflow-style: none; } IE and Edge */
+/* body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } Chrome */
 
 .inter-light {
   font-family: "Inter", sans-serif;
@@ -51,8 +51,8 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
 body {
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    padding: 0 25% 0 25%;
-    margin: 0;
+    width: 960px;
+    margin: 0 auto;
     height: 100vh;
     background-color: var(--bg);;
     color: oklch(98.5% 0.001 106.423);
@@ -61,7 +61,7 @@ body {
     flex-direction: column;
     flex: 1;
     gap: 0.5rem;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .about {
@@ -197,6 +197,7 @@ button:hover {
   position: absolute;
   z-index: 1;
   top: 0;
+  color: var(--primary);
 }
 
 img {
@@ -255,7 +256,40 @@ img {
   height: 100%;
 }
 
-.card-desc {
-  color: var(--primary);
+@media (max-width: 960px) {
+  body {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+  }
 
+  .about {
+    padding-top: 0;
+  }
+
+  .title {
+    font-size: 1.5rem;
+}
+  .name {
+    font-size: 2rem;
+  }
+  .dropbtn {
+    display: none;
+  }
+  .cardlist > div {
+    margin: 1rem;
+  }
+
+  .cardlist > div:nth-child(-n + 2) {
+    margin-top: 0.75rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .card-footer {
+    font-size: 0.75rem;
+  }
+  .dropdown > .description {
+    font-size: 0.8rem;
+  }
 }
